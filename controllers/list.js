@@ -4,6 +4,15 @@ const Jabbar = require('../model/person');
 
 const router = express.Router();
 
+app.delete('/writer/:id', function (req, res) {
+
+    const p = person.find()
+    var id = req.params.id;
+    p.delete(id)
+
+    return res.status(200);
+})
+
 
 router.get('/', (req, res)=>{
 
